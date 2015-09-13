@@ -5,14 +5,14 @@ mamiline.net
 
 カンタンなデザインで、CSS設計を考えて、Sassを実践する
 
-# 要件
+# 仕様
 
 - HTMLをjadeで書く
 - CSS設計を考えてみる
 - BEM っぽい考え方で作る
 - Sass を使用する
 
-# 仕様
+# 要件
 
 - BEM
 - Sass
