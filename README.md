@@ -7,10 +7,10 @@ mamiline.net
 
 # 要件
 
-jadeでHTMLを書く
-CSS設計を考えてみる
-BEM っぽい考え方で作っていく
-Sass を使用する
+- jadeでHTMLを書く
+- CSS設計を考えてみる
+- BEM っぽい考え方で作っていく
+- Sass を使用する
 
 # 仕様
 
