@@ -6,6 +6,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify       = require('gulp-uglify');
 var browserSync  = require('browser-sync');
 var plumber      = require('gulp-plumber');
+var jade         = require('gulp-jade');
 
 var sassSrc      = 'src/assets/scss/**/*.scss';
 var prejsSrc     = 'src/assets/js/**/*.js';
