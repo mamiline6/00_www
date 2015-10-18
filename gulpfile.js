@@ -9,6 +9,7 @@ var plumber      = require('gulp-plumber');
 var jade         = require('gulp-jade');
 
 var jadeSrc      = 'src/assets/jade/**/*.jade';
+var _jadeSrc     = '!src/assets/jade/**/_*.jade';
 var sassSrc      = 'src/assets/scss/**/*.scss';
 var prejsSrc     = 'src/assets/js/**/*.js';
 var templatesSrc = 'app/';
@@ -19,7 +20,7 @@ var rootSrc      = 'app';
 
 
 gulp.task('jade', function() {
-	gulp.src([jadeSrc,'!src/assets/jade/**/_*.jade'])
+	gulp.src([jadeSrc, _jadeSrc])
 		.pipe(jade({
 			pretty: true
 		}))
