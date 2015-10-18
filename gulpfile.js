@@ -8,12 +8,23 @@ var browserSync  = require('browser-sync');
 var plumber      = require('gulp-plumber');
 var jade         = require('gulp-jade');
 
+var jadeSrc      = 'src/assets/jade/**/*.jade';
 var sassSrc      = 'src/assets/scss/**/*.scss';
 var prejsSrc     = 'src/assets/js/**/*.js';
+var templatesSrc = 'app/';
 var cssSrc       = 'app/css';
 var minjsSrc     = 'app/js';
-var devSrc       = 'app/**'
-var rootSrc      = 'app'
+var devSrc       = 'app/**';
+var rootSrc      = 'app';
+
+
+gulp.task('jade', function() {
+	gulp.src([jadeSrc,'!src/assets/jade/**/_*.jade'])
+		.pipe(jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest(templatesSrc));
+});
 
 gulp.task('sass', function(){
 	gulp.src(sassSrc)
@@ -27,7 +38,7 @@ gulp.task('sass', function(){
 		.pipe(rename({
 			extname: '.min.css'
 		}))
-		.pipe(gulp.dest(cssSrc))
+		.pipe(gulp.dest(cssSrc));
 });
 
 gulp.task('js', function () {
@@ -47,6 +58,7 @@ gulp.task('browserSync', function () {
 });
 
 gulp.task('default', function(){
+	gulp.watch(jadeSrc, ['jade']);
 	gulp.watch(sassSrc, ['sass']);
 	gulp.watch(prejsSrc, ['js']);
 	gulp.watch(devSrc, ['browserSync']);

@@ -13,12 +13,12 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.1"
   },
-  "devDependencies": {
-    "gulp-jade": "^1.1.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-jade": "^1.1.0"
+  }
 }
